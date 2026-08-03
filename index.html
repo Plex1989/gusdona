@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoya a Gus | El Sueño Panamericano 2026</title>
+    
+    <!-- Meta tags para compartir en redes -->
+    <meta property="og:title" content="¡Apoya a Gus en su Camino al Panamericano 2026!">
+    <meta property="og:description" content="Con tu respaldo, Gus podrá competir en el Panamericano Juvenil 2026 en Guatemala. ¡Únete a su sueño!">
+    <meta property="og:image" content="WhatsApp Image 2026-08-03 at 1.48.41 AM (2).jpeg">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter para texto limpio y Montserrat para encabezados impactantes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-dark': '#0f172a', /* Azul oscuro elegante */
+                        'primary-light': '#1e293b',
+                        'accent-gold': '#fbbf24', /* Dorado tipo medalla */
+                        'accent-gold-hover': '#f59e0b',
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Animaciones personalizadas suaves */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilo para el botón de copiar para dar feedback visual */
+        .copy-feedback {
+            transition: all 0.3s ease;
+        }
+        .copied {
+            background-color: #10b981 !important; /* Verde éxito */
+            color: white !important;
+            border-color: #10b981 !important;
+        }
+    </style>
+</head>
+<body class="bg-primary-dark text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-accent-gold selection:text-primary-dark">
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Fondo con efecto overlay -->
+        <div class="absolute inset-0 z-0">
+            <!-- Overlay oscuro degradado para mejor legibilidad del texto -->
+            <div class="absolute inset-0 bg-gradient-to-b from-primary-dark/90 via-primary-dark/70 to-primary-dark/90 z-10 mix-blend-multiply"></div>
+            <!-- Nueva imagen de fondo con efecto translúcido -->
+            <img src="hero-bg.jpeg" alt="Gus en el Campeonato Centroamericano" class="w-full h-full object-cover object-top opacity-50 blur-[4px] scale-105 transition-transform duration-[20s] ease-out hover:scale-110">
+        </div>
+
+        <div class="container mx-auto px-4 z-20 pt-20 pb-12 text-center flex flex-col items-center">
+            
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-accent-gold/30 bg-accent-gold/10 text-accent-gold font-semibold text-sm tracking-wider uppercase fade-in-up shadow-[0_0_15px_rgba(251,191,36,0.2)] backdrop-blur-md">
+                Camino a Guatemala 2026
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-heading font-black text-white mb-6 tracking-tight leading-tight fade-in-up delay-100 drop-shadow-lg">
+                EL SUEÑO <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-gold via-yellow-200 to-accent-gold">PANAMERICANO</span>
+            </h1>
+            
+            <p class="text-lg md:text-2xl font-light text-slate-300 mb-10 max-w-2xl mx-auto fade-in-up delay-200">
+                ¡Apoya a <strong class="text-white font-semibold">Gus</strong>! Con tu respaldo podrá competir en el Panamericano Juvenil de Tenis de Mesa representando a México.
+            </p>
+
+            <!-- Action Buttons Row -->
+            <div class="flex flex-wrap justify-center gap-4 fade-in-up delay-300 w-full max-w-lg mx-auto">
+                <a href="#donar" class="flex-1 min-w-[140px] bg-gradient-to-r from-accent-gold to-yellow-500 hover:from-accent-gold-hover hover:to-yellow-600 text-primary-dark font-bold py-4 px-8 rounded-xl shadow-[0_0_20px_rgba(251,191,36,0.4)] transform transition hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(251,191,36,0.6)] flex items-center justify-center gap-2 text-lg">
+                    <i class="fa-solid fa-heart"></i> DONAR
+                </a>
+                
+                <a href="#compartir" class="flex-1 min-w-[140px] bg-primary-light border-2 border-slate-600 hover:border-slate-400 text-white font-bold py-4 px-8 rounded-xl transition transform hover:-translate-y-1 flex items-center justify-center gap-2 text-lg">
+                    <i class="fa-solid fa-share-nodes"></i> COMPARTIR
+                </a>
+            </div>
+            
+            <div class="mt-16 animate-bounce fade-in-up delay-300">
+                <a href="#historia" class="text-slate-400 hover:text-accent-gold transition flex flex-col items-center">
+                    <span class="text-sm mb-2 uppercase tracking-widest font-semibold">Conoce más</span>
+                    <i class="fa-solid fa-chevron-down text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Historia / Sobre Gus Section -->
+    <section id="historia" class="py-24 bg-primary-dark relative">
+        <div class="container mx-auto px-4 max-w-6xl">
+            
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-white mb-4">Un Campeón en Crecimiento</h2>
+                <div class="h-1 w-24 bg-accent-gold mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Galería de imágenes -->
+                <div class="space-y-6">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-700/50 transform transition hover:scale-[1.02]">
+                        <img src="WhatsApp Image 2026-08-03 at 1.48.41 AM (2).jpeg" alt="Gus en el campeonato Centroamericano y del Caribe" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-700/50 transform transition hover:scale-[1.02]">
+                        <img src="WhatsApp Image 2026-08-03 at 1.48.41 AM (1).jpeg" alt="Gus sosteniendo sus trofeos" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+
+                <!-- Texto de la historia -->
+                <div class="bg-primary-light/50 p-8 md:p-10 rounded-3xl border border-slate-700/50 backdrop-blur-sm">
+                    <h3 class="text-2xl md:text-3xl font-heading font-bold text-white mb-6">El Esfuerzo Detrás del Éxito</h3>
+                    
+                    <div class="space-y-6 text-slate-300 leading-relaxed text-lg font-light">
+                        <p>
+                            Gus ha demostrado ser una de las grandes promesas del <strong class="text-white">Tenis de Mesa</strong> en México. Su reciente participación en el Campeonato Centroamericano y del Caribe en Guadalajara 2026 es prueba de su talento, dedicación y horas interminables de entrenamiento.
+                        </p>
+                        <p>
+                            Cada saque, cada revés y cada victoria lo han acercado a un objetivo aún mayor: representar a nuestro país en el <strong class="text-accent-gold">Panamericano Juvenil 2026 en Guatemala</strong>.
+                        </p>
+                        <p>
+                            Sin embargo, llegar a la cima requiere apoyo. Los costos de viaje, hospedaje, alimentación y equipo especializado son un reto que podemos superar juntos.
+                        </p>
+                        <div class="bg-primary-dark/80 p-6 rounded-2xl border-l-4 border-accent-gold mt-8">
+                            <p class="font-semibold text-white italic">
+                                "Con tu ayuda, Gus no solo viajará a Guatemala, llevará consigo el respaldo de todos los que creemos en su sueño."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Donación Section -->
+    <section id="donar" class="py-24 bg-gradient-to-b from-primary-dark to-primary-light relative border-t border-slate-800">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-accent-gold/50 to-transparent"></div>
+        
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-accent-gold/10 text-accent-gold mb-6">
+                <i class="fa-solid fa-trophy text-4xl"></i>
+            </div>
+            
+            <h2 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">Haz Posible el Viaje</h2>
+            <p class="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-light">
+                Cualquier aportación, grande o pequeña, marca una enorme diferencia. Tu donativo va directamente a cubrir los gastos de Gus para el Panamericano.
+            </p>
+
+            <!-- Tarjeta de Cuenta Bancaria -->
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl border border-slate-700 relative overflow-hidden group">
+                <!-- Decorative background elements -->
+                <div class="absolute -right-20 -top-20 w-64 h-64 bg-accent-gold/5 rounded-full blur-3xl group-hover:bg-accent-gold/10 transition duration-700"></div>
+                <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
+
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                    
+                    <div class="text-left">
+                        <div class="flex items-center gap-3 mb-2 text-slate-400 font-semibold uppercase tracking-wider text-sm">
+                            <i class="fa-solid fa-building-columns"></i>
+                            <span>Transferencia o Depósito</span>
+                        </div>
+                        <h4 class="text-2xl md:text-3xl font-bold text-white mb-1">Cuenta BBVA</h4>
+                        <p class="text-slate-400 text-sm">A nombre del tutor legal / representante</p>
+                    </div>
+
+                    <div class="w-full md:w-auto flex flex-col items-center md:items-end">
+                        <!-- Número de cuenta grande -->
+                        <div class="bg-primary-dark py-4 px-6 rounded-xl border border-slate-700 font-mono text-2xl md:text-3xl font-bold text-accent-gold tracking-widest mb-4 shadow-inner flex items-center justify-center w-full md:w-auto">
+                            <span id="account-number">4152 3146 7524 0231</span>
+                        </div>
+                        
+                        <!-- Botón para copiar -->
+                        <button onclick="copyToClipboard()" id="copy-btn" class="copy-feedback w-full md:w-auto bg-slate-700 hover:bg-slate-600 text-white font-semibold py-3 px-6 rounded-lg transition flex items-center justify-center gap-2">
+                            <i class="fa-regular fa-copy"></i>
+                            <span id="copy-text">Copiar Número de Cuenta</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-slate-400 text-sm">
+                <p><i class="fa-solid fa-shield-halved mr-2 text-emerald-500"></i> Tu apoyo es fundamental y agradecemos profundamente tu confianza.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compartir Section -->
+    <section id="compartir" class="py-24 bg-primary-dark text-center">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6">Si no puedes donar, ¡Ayúdanos Compartiendo!</h2>
+            <p class="text-lg text-slate-300 mb-10 font-light">
+                Hacer ruido es igual de importante. Comparte esta página con tus amigos, familiares y grupos. Mientras a más personas lleguemos, más cerca estará Gus de Guatemala.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <!-- Compartir en WhatsApp -->
+                <a href="#" onclick="shareWhatsApp(event)" class="bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 px-8 rounded-xl transition transform hover:-translate-y-1 flex items-center justify-center gap-3 text-lg shadow-lg shadow-[#25D366]/20 w-full sm:w-auto">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    Compartir en WhatsApp
+                </a>
+                
+                <!-- Compartir en Facebook -->
+                <a href="#" onclick="shareFacebook(event)" class="bg-[#1877F2] hover:bg-[#166fe5] text-white font-bold py-4 px-8 rounded-xl transition transform hover:-translate-y-1 flex items-center justify-center gap-3 text-lg shadow-lg shadow-[#1877F2]/20 w-full sm:w-auto">
+                    <i class="fa-brands fa-facebook text-2xl"></i>
+                    Compartir en Facebook
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-10 border-t border-slate-800 text-center">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center gap-4 mb-6">
+                <img src="WhatsApp Image 2026-08-03 at 1.48.41 AM.jpeg" class="w-12 h-12 rounded-full object-cover border-2 border-accent-gold" alt="Gus Thumbnail">
+                <span class="font-heading font-bold text-white text-xl">Apoya a Gus</span>
+            </div>
+            <p class="text-slate-500 text-sm">
+                &copy; 2026. Todos los derechos reservados. Juntos al Panamericano Juvenil Guatemala 2026.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts Interactivos -->
+    <script>
+        // Función para copiar el número de cuenta al portapapeles
+        function copyToClipboard() {
+            const accountNumber = document.getElementById('account-number').innerText.replace(/\s+/g, ''); // Quita espacios si se quiere copiar limpio
+            // Usamos un input temporal para compatibilidad más amplia, aunque execCommand está deprecado, suele ser más seguro en iframes/algunos entornos si el Clipboard API falla.
+            const tempInput = document.createElement('input');
+            tempInput.value = accountNumber;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            
+            let success = false;
+            try {
+                success = document.execCommand('copy');
+            } catch (err) {
+                console.error('Error al copiar', err);
+            }
+            
+            document.body.removeChild(tempInput);
+
+            // Feedback visual
+            if (success) {
+                const btn = document.getElementById('copy-btn');
+                const text = document.getElementById('copy-text');
+                const icon = btn.querySelector('i');
+
+                // Cambiar estado
+                btn.classList.add('copied');
+                text.innerText = '¡Copiado!';
+                icon.className = 'fa-solid fa-check';
+
+                // Restaurar estado después de 3 segundos
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    text.innerText = 'Copiar Número de Cuenta';
+                    icon.className = 'fa-regular fa-copy';
+                }, 3000);
+            }
+        }
+
+        // Funciones para compartir en redes
+        const shareUrl = encodeURIComponent(window.location.href);
+        const shareText = encodeURIComponent("¡Apoya a Gus en su camino al Panamericano Juvenil de Tenis de Mesa Guatemala 2026! Conoce su historia y suma tu apoyo aquí: ");
+
+        function shareWhatsApp(e) {
+            e.preventDefault();
+            // Detectar si es móvil para abrir la app o web
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            const whatsappUrl = isMobile 
+                ? `whatsapp://send?text=${shareText}${shareUrl}` 
+                : `https://web.whatsapp.com/send?text=${shareText}${shareUrl}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+
+        function shareFacebook(e) {
+            e.preventDefault();
+            const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${shareText}`;
+            window.open(facebookUrl, 'facebook-share-dialog', 'width=800,height=600');
+        }
+    </script>
+</body>
+</html>
